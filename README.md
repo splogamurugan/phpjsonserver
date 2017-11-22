@@ -98,7 +98,7 @@ DELETE Request (UPDATE an entry)
 -------------------------------
 Copy paste the below code in your browser
 ```javascript
-var data = "{\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\", \"updated_by\":\"splogamurugan@gmail.com\"}";
+var data = null;
 
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
@@ -112,7 +112,7 @@ xhr.addEventListener("readystatechange", function () {
 xhr.open("DELETE", "http://localhost/phpjsonserver/index.php/justification/xxxxxxxxx");
 xhr.send(data);
 ```
-* here "justification" is the table and "data" contains the row to be stored, xxxxxxxxx is the primary key to update
+* here "justification" is the table and xxxxxxxxx is the primary key of a record to be deleted!
 
 
 
