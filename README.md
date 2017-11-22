@@ -17,7 +17,7 @@ I assume docroot of your server is /var/www/html. Please change the docroot (/va
 ```shell
   git clone https://github.com/splogamurugan/phpjsonserver.git
   cp -R phpjsonserver /var/www/html
-  chmod 755 -R /var/www/html/data
+  chmod 755 -R /var/www/html/phpjsonserver/data
 ```
 
 Usage
