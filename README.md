@@ -11,8 +11,8 @@ Only prerequisite is for you to have HTTP server (Apache) up and running
 
 
 
-How to install?
----------------
+Installation
+============
 I assume docroot of your server is /var/www/html. Please change the docroot (/var/www/html) as per your HTTP server
 ```shell
   git clone https://github.com/splogamurugan/phpjsonserver.git
