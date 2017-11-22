@@ -13,10 +13,12 @@ I assume you have your HTTP server up and running and the docroot of your server
 
 How to install?
 --------------
+Change the docroot (/var/www/html) as per your HTTP server
+```shell
   git clone https://github.com/splogamurugan/phpjsonserver.git
-  cp phpjsonserver /var/www/html (Change the docroot as per your HTTP server)
+  cp -R phpjsonserver /var/www/html
   chmod 755 -R /var/www/html/data
-
+```
 
 How to play around?
 ==================
@@ -68,9 +70,10 @@ Copy paste the below code in your browser console
   xhr.send(data);
 ```
 
-  * sample response
+Sample response
+```javascript
   {\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\",\"updated_by\":\"splogamurugan@gmail.com\",\"id\":34}
-
+```
 
 PUT Request (UPDATE an entry)
 ----------------------------
