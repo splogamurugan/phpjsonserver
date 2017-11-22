@@ -23,8 +23,11 @@ How to play around?
 You can access this server through http://localhost/phpjsonserver/ 
 
 
-POST Request - CREATE an entry - (Copy paste the below code in your browser console)
-------------------------------------------------------------------------------------
+POST Request - CREATE an entry
+------------------------------
+Copy paste the below code in your browser console
+
+```javascript
 var data = "{\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\", \"updated_by\":\"splogamurugan@gmail.com\"}";
 
 var xhr = new XMLHttpRequest();
@@ -38,13 +41,17 @@ xhr.addEventListener("readystatechange", function () {
 
 xhr.open("POST", "http://localhost/phpjsonserver/index.php/justification/");
 xhr.send(data);
+```
 
 * here "justification" is the table and "data" contains the row to be stored
 
 
 
-GET Request (copy paste the below code in your browser console)
-----------------------------------------------------------------
+GET Request
+------------
+Copy paste the below code in your browser console
+
+```javascript
   var data = null;
 
   var xhr = new XMLHttpRequest();
@@ -59,15 +66,16 @@ GET Request (copy paste the below code in your browser console)
   xhr.open("GET", "http://localhost/phpjsonserver/index.php/justification/34");
   xhr.setRequestHeader("cache-control", "no-cache");
   xhr.send(data);
+```
 
-  sample response
-  ---------------
+  * sample response
   {\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\",\"updated_by\":\"splogamurugan@gmail.com\",\"id\":34}
 
 
-PUT Request (UPDATE an entry
+PUT Request (UPDATE an entry)
 ----------------------------
-
+Copy paste the below code in your browser console
+```javascript
 var data = "{\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\", \"updated_by\":\"splogamurugan@gmail.com\"}";
 
 var xhr = new XMLHttpRequest();
@@ -81,13 +89,14 @@ xhr.addEventListener("readystatechange", function () {
 
 xhr.open("PUT", "http://localhost/phpjsonserver/index.php/justification/xxxxxxxxx");
 xhr.send(data);
-
+```
 * here "justification" is the table and "data" contains the row to be stored, xxxxxxxxx is the primary key to update
 
 
-DELETE Request (UPDATE an entry
+DELETE Request (UPDATE an entry)
 -------------------------------
-
+Copy paste the below code in your browser
+```javascript
 var data = "{\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\", \"updated_by\":\"splogamurugan@gmail.com\"}";
 
 var xhr = new XMLHttpRequest();
@@ -101,7 +110,7 @@ xhr.addEventListener("readystatechange", function () {
 
 xhr.open("DELETE", "http://localhost/phpjsonserver/index.php/justification/xxxxxxxxx");
 xhr.send(data);
-
+```
 * here "justification" is the table and "data" contains the row to be stored, xxxxxxxxx is the primary key to update
 
 
