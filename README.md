@@ -1,5 +1,5 @@
-A JSON server to simulate REST service
-======================================
+PHP Json Server
+===============
 
 A common task for front-end developers is to simulate a backend REST service to deliver some data in JSON format to the front-end application in order to ensure the front-end is working as expected.
 
@@ -12,7 +12,7 @@ Only prerequisite is for you to have HTTP server (Apache) up and running
 
 
 How to install?
---------------
+---------------
 I assume docroot of your server is /var/www/html. Please change the docroot (/var/www/html) as per your HTTP server
 ```shell
   git clone https://github.com/splogamurugan/phpjsonserver.git
@@ -20,13 +20,11 @@ I assume docroot of your server is /var/www/html. Please change the docroot (/va
   chmod 755 -R /var/www/html/data
 ```
 
-How to play around?
-==================
-You can access this server through http://localhost/phpjsonserver/ 
+Usage
+===============
 
-
-POST Request - CREATE an entry
-------------------------------
+POST Request - (CREATE an entry)
+--------------------------------
 Copy paste the below code in your browser console
 
 ```javascript
