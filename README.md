@@ -7,6 +7,10 @@ Setting up a full backend server takes some time. A much simpler approach can he
 
 JSON Server is a simple project that helps you to setup a REST API with CRUD operations very fast. You can get a full fake REST API with zero coding in less than 30 seconds (seriously)!!!
 
+
+I assume you have your HTTP server up and running and the docroot of your server is /var/www/html
+
+
 How to install?
 --------------
   git clone https://github.com/splogamurugan/phpjsonserver.git
@@ -19,31 +23,8 @@ How to play around?
 You can access this server through http://localhost/phpjsonserver/ 
 
 
-GET Request (get a record)
---------------------------
-var data = null;
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === 4) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("GET", "http://localhost/phpjsonserver/index.php/justification/34");
-xhr.setRequestHeader("cache-control", "no-cache");
-xhr.send(data);
-
-sample response
----------------
-{\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\",\"updated_by\":\"splogamurugan@gmail.com\",\"id\":34}
-
-
-
-POST Request (CREATE an entry) 
-------------------------------
+POST Request - CREATE an entry - (Copy paste the below code in your browser console)
+------------------------------------------------------------------------------------
 var data = "{\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\", \"updated_by\":\"splogamurugan@gmail.com\"}";
 
 var xhr = new XMLHttpRequest();
@@ -59,6 +40,29 @@ xhr.open("POST", "http://localhost/phpjsonserver/index.php/justification/");
 xhr.send(data);
 
 * here "justification" is the table and "data" contains the row to be stored
+
+
+
+GET Request (copy paste the below code in your browser console)
+----------------------------------------------------------------
+  var data = null;
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === 4) {
+      console.log(this.responseText);
+    }
+  });
+
+  xhr.open("GET", "http://localhost/phpjsonserver/index.php/justification/34");
+  xhr.setRequestHeader("cache-control", "no-cache");
+  xhr.send(data);
+
+  sample response
+  ---------------
+  {\"justification\":\"this is the content\",\"ceid\":\"sdf3434,343434,4545454,454232,565656\",\"updated_by\":\"splogamurugan@gmail.com\",\"id\":34}
 
 
 PUT Request (UPDATE an entry
