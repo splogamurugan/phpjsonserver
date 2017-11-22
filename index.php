@@ -10,18 +10,18 @@ $key = array_shift($request)+0;
 $folderToLook = __DIR__.'/db/'.$table;
 
 if (!file_exists($folderToLook)) {
-	mkdir($folderToLook);
+    mkdir($folderToLook);
 }
 
 if (!$key) {
-	$key = mktime();
+    $key = mktime();
 }
 if ($input) {
-	$input['id'] = $key;
+    $input['id'] = $key;
 }
 
 
-echo $fileToLook = $folderToLook.'/'.$key.'.json';
+//echo $fileToLook = $folderToLook.'/'.$key.'.json';
  
 // create SQL based on HTTP method
 switch ($method) {
