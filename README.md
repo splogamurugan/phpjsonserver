@@ -1,19 +1,19 @@
 A JSON server to simulate REST service
 ======================================
 
-A common task for front-end developers is to simulate a backend REST service to deliver some data in JSON format to the front-end application and make sure everything is working as expected at the front-end.
+A common task for front-end developers is to simulate a backend REST service to deliver some data in JSON format to the front-end application in order to ensure the front-end is working as expected.
 
-Setting up a full backend server takes some time. A much simpler approach can help to speed up front-end development time. This enables both frontend and backend development go parallel (Agile)
+Setting up a full back-end server is time consuming and an impediment for parallel development. This simpler approach can help fasten the front-end development time and enable front-end and back-end development go in parallel (The Agile Way)
 
-JSON Server is a simple project that helps you to setup a REST API with CRUD operations very fast. You can get a full fake REST API with zero coding in less than 30 seconds (seriously)!!!
+JSON Server is a simple project that helps you to setup a REST API with CRUD operations very fast by leveraging this one can get a full fake REST API with zero coding in less than 30 seconds (How Awesome Is That)!!!
 
+Only prerequisite is for you to have HTTP server (Apache) up and running
 
-I assume you have your HTTP server up and running and the docroot of your server is /var/www/html
 
 
 How to install?
 --------------
-Change the docroot (/var/www/html) as per your HTTP server
+I assume docroot of your server is /var/www/html. Please change the docroot (/var/www/html) as per your HTTP server
 ```shell
   git clone https://github.com/splogamurugan/phpjsonserver.git
   cp -R phpjsonserver /var/www/html
